@@ -1,0 +1,15 @@
+/workspaces/Cs18-Mockdrill_cleaningbot/Cleaningbot/bin/Debug/net8.0/Cleaningbot
+/workspaces/Cs18-Mockdrill_cleaningbot/Cleaningbot/bin/Debug/net8.0/Cleaningbot.deps.json
+/workspaces/Cs18-Mockdrill_cleaningbot/Cleaningbot/bin/Debug/net8.0/Cleaningbot.runtimeconfig.json
+/workspaces/Cs18-Mockdrill_cleaningbot/Cleaningbot/bin/Debug/net8.0/Cleaningbot.dll
+/workspaces/Cs18-Mockdrill_cleaningbot/Cleaningbot/bin/Debug/net8.0/Cleaningbot.pdb
+/workspaces/Cs18-Mockdrill_cleaningbot/Cleaningbot/obj/Debug/net8.0/Cleaningbot.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/Cs18-Mockdrill_cleaningbot/Cleaningbot/obj/Debug/net8.0/Cleaningbot.AssemblyInfoInputs.cache
+/workspaces/Cs18-Mockdrill_cleaningbot/Cleaningbot/obj/Debug/net8.0/Cleaningbot.AssemblyInfo.cs
+/workspaces/Cs18-Mockdrill_cleaningbot/Cleaningbot/obj/Debug/net8.0/Cleaningbot.csproj.CoreCompileInputs.cache
+/workspaces/Cs18-Mockdrill_cleaningbot/Cleaningbot/obj/Debug/net8.0/Cleaningbot.sourcelink.json
+/workspaces/Cs18-Mockdrill_cleaningbot/Cleaningbot/obj/Debug/net8.0/Cleaningbot.dll
+/workspaces/Cs18-Mockdrill_cleaningbot/Cleaningbot/obj/Debug/net8.0/refint/Cleaningbot.dll
+/workspaces/Cs18-Mockdrill_cleaningbot/Cleaningbot/obj/Debug/net8.0/Cleaningbot.pdb
+/workspaces/Cs18-Mockdrill_cleaningbot/Cleaningbot/obj/Debug/net8.0/Cleaningbot.genruntimeconfig.cache
+/workspaces/Cs18-Mockdrill_cleaningbot/Cleaningbot/obj/Debug/net8.0/ref/Cleaningbot.dll
