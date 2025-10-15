@@ -157,6 +157,30 @@ namespace RobotCleaner
         }
     }
   }
+    public class PerimeterHuggerStrategy : IStrategy
+    {
+        public void Clean(Robot robot)
+        {
+            int direction = 1;
+            while (robot.Move(robot.X + 1, robot.Y))
+            {
+                robot.CleanCurrentSpot();
+            }
+            while (robot.Move(robot.X, robot.Y + 1))
+            {
+                robot.CleanCurrentSpot();
+            }
+            while (robot.Move(robot.X - 1, robot.Y))
+            {
+                robot.CleanCurrentSpot();
+            }
+            while (robot.Move(robot.X, robot.Y - 1))
+            {
+                robot.CleanCurrentSpot();
+            }
+        }
+    }
+
 
   public class Program
   {
@@ -165,7 +189,7 @@ namespace RobotCleaner
       Console.WriteLine("Initialize robot");
 
 
-      IStrategy some_strategy = new SomeStrategy();
+      IStrategy some_strategy = new PerimeterHuggerStrategy();
 
       Map map = new Map(20, 10);
       // map.Display( 10,10);
