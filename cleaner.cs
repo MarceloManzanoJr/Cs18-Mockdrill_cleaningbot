@@ -1,4 +1,6 @@
 ﻿using System;
+using NUnit.Framework;
+
 namespace RobotCleaner
 {
   public class Map
@@ -53,13 +55,11 @@ namespace RobotCleaner
     }
     public void Display(int robotX, int robotY)
     {
-      // display the 2d grid, it accepts the location of the robot in x and y
       Console.Clear();
       Console.WriteLine("Vacuum cleaner robot simulation");
       Console.WriteLine("--------------------------------");
       Console.WriteLine("Legends: #=Obstacles, D=Dirt, .=Empty, R=Robot, C=Cleaned");
 
-      //display the grid using loop
       for (int y = 0; y < this.Height; y++)
       {
         for (int x = 0; x < this.Width; x++)
@@ -80,11 +80,11 @@ namespace RobotCleaner
           }
         }
         Console.WriteLine();
-      } //outer for loop
+      }
       // add delay
       Thread.Sleep(200);
-    } // display method
-  }//class map
+    } 
+  }
   public interface IStrategy
   {
     void Clean(Robot robot);
@@ -112,16 +112,14 @@ namespace RobotCleaner
     {
       if( _map.IsInBounds(newX, newY) && !_map.IsObstacle(newX, newY) )
       {
-        // set the new location
         X = newX;
         Y = newY;
-        // display the map with the robot in its location in the grid
         _map.Display(X, Y);
           return true;
       }
-      // it cannot move
+
       return false;
-    }// Move method
+    }
 
     public void CleanCurrentSpot()
     {
@@ -142,7 +140,7 @@ namespace RobotCleaner
   {
     public void Clean(Robot robot)
     {
-        int direction = 1; // 1 = right, -1 = left
+        int direction = 1; 
         for (int y = 0; y < robot.Map.Height; y++)
         {
             int startX = (direction == 1) ? 0 : robot.Map.Width - 1;
@@ -153,7 +151,7 @@ namespace RobotCleaner
                 robot.Move(x, y);
                 robot.CleanCurrentSpot();
             }
-            direction *= -1; // Reverse direction for the next row
+            direction *= -1; 
         }
     }
   }
@@ -182,30 +180,29 @@ namespace RobotCleaner
     }
 
 
-  public class Program
-  {
+    // Uncomment this if you want to run manually instead of tests
+    /*
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("Initialize robot");
 
-    public static void Main(string[] args){
-      Console.WriteLine("Initialize robot");
+            IStrategy some_strategy = new PerimeterHuggerStrategy();
+            Map map = new Map(20, 10);
 
+            map.AddDirt(5, 3);
+            map.AddDirt(10, 8);
+            map.AddObstacle(2, 5);
+            map.AddObstacle(12, 1);
+            map.Display(11, 8);
 
-      IStrategy some_strategy = new PerimeterHuggerStrategy();
+            Robot robot = new Robot(map, some_strategy);
+            robot.StartCleaning();
 
-      Map map = new Map(20, 10);
-      // map.Display( 10,10);
-
-      map.AddDirt(5,3);
-      map.AddDirt(10, 8);
-      map.AddObstacle(2,5);
-      map.AddObstacle(12,1);
-      map.Display(11,8);
-
-      Robot robot = new Robot(map,some_strategy);
-
-      robot.StartCleaning();
-
-      Console.WriteLine("Done.");
+            Console.WriteLine("Done.");
+        }
     }
-  }
-}
+    */
+} // 
 
