@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Cleaningbot")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1af3b3acbee48a66dafdbe7f500c488f1bbdddc0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b10cd0f501027ea85445fb2845154f658f93ce9")]
 [assembly: System.Reflection.AssemblyProductAttribute("Cleaningbot")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Cleaningbot")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -80,11 +80,11 @@ namespace RobotCleaner
           }
         }
         Console.WriteLine();
-      } //outer for loop
-      // add delay
+      } 
+      
       Thread.Sleep(200);
-    } // display method
-  }//class map
+    } 
+  }
   public interface IStrategy
   {
     void Clean(Robot robot);
@@ -239,27 +239,28 @@ public class SpiralStrategy : IStrategy
         }
     }
 }
-  public class Program
-  {
-
-    public static void Main(string[] args)
+    /*
+    public class Program
     {
-    Console.WriteLine("Initialize robot");
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("Initialize robot");
 
-    Map map = new Map(20, 10);
-    map.AddDirt(5, 3);
-    map.AddDirt(10, 9);
-    map.AddDirt(1, 1);
-    map.AddObstacle(2, 5);
-    map.AddObstacle(12, 1);
+            IStrategy some_strategy = new PerimeterHuggerStrategy();
+            Map map = new Map(20, 10);
 
-    IStrategy strategy = new SpiralStrategy();
-    Robot robot = new Robot(map, strategy);
+            map.AddDirt(5, 3);
+            map.AddDirt(10, 8);
+            map.AddObstacle(2, 5);
+            map.AddObstacle(12, 1);
+            map.Display(11, 8);
 
-    robot.StartCleaning();
+            Robot robot = new Robot(map, some_strategy);
+            robot.StartCleaning();
 
-    Console.WriteLine("Done.");
+            Console.WriteLine("Done.");
+        }
     }
-  }
-}
+    */
+} // 
 
